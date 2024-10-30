@@ -1,4 +1,4 @@
 from .dkn import DKN, FDKN
 from .djf import DJF
-from .jiif import JIIF
+from .gpgd import GPGD
 from .Jiff_Cou import JIIF_Cou

@@ -9,8 +9,8 @@ from datasets import *
 from models import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--name', type=str, default='jiif')
-parser.add_argument('--model', type=str, default='JIIF')
+parser.add_argument('--name', type=str, default='gpgd')
+parser.add_argument('--model', type=str, default='GPGD')
 parser.add_argument('--loss', type=str, default='L1')
 parser.add_argument('--seed', type=int, default=0)
 parser.add_argument('--dataset', type=str, default='NYU')
@@ -45,8 +45,8 @@ elif args.model == 'FDKN':
     model = FDKN(kernel_size=3, filter_size=15, residual=True)
 elif args.model == 'DJF':
     model = DJF(residual=True)
-elif args.model == 'JIIF':
-    model = JIIF(args, 128, 128)
+elif args.model == 'GPGD':
+    model = GPGD(args, 128, 128)
 else:
     raise NotImplementedError(f'Model {args.model} not found')
 
@@ -70,7 +70,7 @@ elif args.dataset == 'NoisyMiddlebury':
 else:
     raise NotImplementedError(f'Dataset {args.loss} not found')
 
-if args.model in ['JIIF']:
+if args.model in ['GPGD']:
     if not args.test:
         train_dataset = dataset(root=args.data_root, split='train', scale=args.scale, downsample=args.interpolation, augment=True, to_pixel=True, sample_q=args.sample_q, input_size=args.input_size, noisy=args.noisy)
     test_dataset = dataset(root=args.data_root, split='test', scale=args.scale, downsample=args.interpolation, augment=False, to_pixel=True, sample_q=None) # full image

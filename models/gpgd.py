@@ -171,7 +171,7 @@ class MLP(nn.Module):
         return x
 
 
-class JIIF(nn.Module):
+class GPGD(nn.Module):
 
     def __init__(self, args, feat_dim=128, guide_dim=128, mlp_dim=[1024,512,256,128]):
         super().__init__()
