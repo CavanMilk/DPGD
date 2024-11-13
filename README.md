@@ -1,4 +1,4 @@
-# Dual Prior Guided Depth Image Super-Resolution with Multi-Scale Transformer Fusion Networ
+# Dual Prior Guided Depth Image Super-Resolution with Multi-Scale Transformer Fusion Network
 
 Pengfei Zhao, Jianhua Ji, Yang Wen, Wuzhen Shi, WenmingCao
 
